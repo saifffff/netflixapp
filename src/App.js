@@ -5,33 +5,25 @@ import './App.css';
 
 
 const App=()=>{
+
+    const ncard=(val,index)=>{return(  <Card 
+        key={val.id}
+        isrc={val.isrc}
+        title={val.sname}
+        link={val.link}
+        span={val.span}
+       />)}
+       
+       
     return(<>
 
+    <h1 className="heading">My Favourite Netflix Series</h1>
     <div className="main_div">
-        <Card 
-        isrc="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfSaVJADtNW0f28A0YJ1sGeS4oSMfpkZryxeNNZaUEVKgkeVpV"
-        title="How I Met Your Mother"
-        link="https://www.imdb.com/title/tt0460649/"
-        span="A Netflix Original Series"
-        />
-
-        <Card 
-        isrc="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfSaVJADtNW0f28A0YJ1sGeS4oSMfpkZryxeNNZaUEVKgkeVpV"
-        title="How I Met Your Mother"
-        link="https://www.imdb.com/title/tt0460649/"
-        span="A Netflix Original Series"
-        />
-
-        <Card 
-        isrc="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRfSaVJADtNW0f28A0YJ1sGeS4oSMfpkZryxeNNZaUEVKgkeVpV"
-        title="How I Met Your Mother"
-        link="https://www.imdb.com/title/tt0460649/"
-        span="A Netflix Original Series"
-        />
+      {Cdata.map(ncard)}
        </div>
        </>
         
     )
-}
+} 
 
 export default App;
